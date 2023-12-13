@@ -21,7 +21,7 @@ namespace MasterServiceBack.Controllers
             _context = context;
         }
 
-        [HttpGet("getApplicationByCategory/{idCategory}")]
+        [HttpPost("getApplicationByCategory/{idCategory}")]
         public IActionResult GetApp([FromForm] int idCategory)
         {
            var list = _context.Applications.Where(x => x.CategoryId == idCategory).ToListAsync();

@@ -30,7 +30,12 @@ namespace MasterServiceBack.Controllers
           {
               return NotFound();
           }
-            return await _context.Applications.ToListAsync();
+          return new JsonResult(new
+          {
+              code = 0,
+              message = "success",
+              data = await _context.Applications.ToListAsync()
+          });
         }
 
         // GET: api/Application/5

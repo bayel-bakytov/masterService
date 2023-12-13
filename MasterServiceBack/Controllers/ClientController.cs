@@ -125,6 +125,7 @@ namespace MasterServiceBack.Controllers
             {
                 code = 0,
                 message = "Успех",
+                data = client
             });
             
         }

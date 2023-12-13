@@ -140,7 +140,9 @@ namespace MasterServiceBack.Controllers
                     DateEnd = applicationDto.DateEnd,
                     LinkImg = "https://localhost:7074/img/"+uniqueFileName,
                     CategoryId = applicationDto.CategoryId,
-                    ClientId = applicationDto.ClientId
+                    ClientId = applicationDto.ClientId,
+                    Status = applicationDto.Status,
+                    Address = applicationDto.Address
                 };
 
                 _context.Applications.Add(application);

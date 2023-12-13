@@ -1,0 +1,88 @@
+{
+  "Version": 1,
+  "Hash": "ubR+43//BhSTiOvEYQKnTJYe/I1BsNANi7Sm7m+0JC8=",
+  "Source": "MasterServiceBack",
+  "BasePath": "_content/MasterServiceBack",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "MasterServiceBack\\wwwroot",
+      "Source": "MasterServiceBack",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Новая папка (2)\\MasterServiceBack\\MasterServiceBack\\wwwroot\\",
+      "BasePath": "_content/MasterServiceBack",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\User\\Desktop\\Новая папка (2)\\MasterServiceBack\\MasterServiceBack\\wwwroot\\img\\20ed64f2-2658-43ff-8d76-3916ecb8d6bf.png",
+      "SourceId": "MasterServiceBack",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Новая папка (2)\\MasterServiceBack\\MasterServiceBack\\wwwroot\\",
+      "BasePath": "_content/MasterServiceBack",
+      "RelativePath": "img/20ed64f2-2658-43ff-8d76-3916ecb8d6bf.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\20ed64f2-2658-43ff-8d76-3916ecb8d6bf.png"
+    },
+    {
+      "Identity": "C:\\Users\\User\\Desktop\\Новая папка (2)\\MasterServiceBack\\MasterServiceBack\\wwwroot\\img\\36cd789a-fefe-4fd9-bfd2-4d9339895402.png",
+      "SourceId": "MasterServiceBack",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Новая папка (2)\\MasterServiceBack\\MasterServiceBack\\wwwroot\\",
+      "BasePath": "_content/MasterServiceBack",
+      "RelativePath": "img/36cd789a-fefe-4fd9-bfd2-4d9339895402.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\36cd789a-fefe-4fd9-bfd2-4d9339895402.png"
+    },
+    {
+      "Identity": "C:\\Users\\User\\Desktop\\Новая папка (2)\\MasterServiceBack\\MasterServiceBack\\wwwroot\\img\\51bb1dfd-c830-4ab6-95c0-968907029d8f.png",
+      "SourceId": "MasterServiceBack",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Новая папка (2)\\MasterServiceBack\\MasterServiceBack\\wwwroot\\",
+      "BasePath": "_content/MasterServiceBack",
+      "RelativePath": "img/51bb1dfd-c830-4ab6-95c0-968907029d8f.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\51bb1dfd-c830-4ab6-95c0-968907029d8f.png"
+    },
+    {
+      "Identity": "C:\\Users\\User\\Desktop\\Новая папка (2)\\MasterServiceBack\\MasterServiceBack\\wwwroot\\img\\c9290e01-353f-49d9-b39e-555e1c955dd9.png",
+      "SourceId": "MasterServiceBack",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Новая папка (2)\\MasterServiceBack\\MasterServiceBack\\wwwroot\\",
+      "BasePath": "_content/MasterServiceBack",
+      "RelativePath": "img/c9290e01-353f-49d9-b39e-555e1c955dd9.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\c9290e01-353f-49d9-b39e-555e1c955dd9.png"
+    }
+  ]
+}

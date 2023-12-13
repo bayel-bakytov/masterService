@@ -21,6 +21,17 @@ namespace MasterServiceBack.Controllers
             _context = context;
         }
 
+        [HttpGet("getApplicationByCategory")]
+        public IActionResult GetApp([FromForm] int idCategory)
+        {
+           var list = _context.Applications.Where(x => x.CategoryId == idCategory).ToListAsync();
+           return new JsonResult(new
+           {
+               code = 0,
+               message = "Успех",
+               data = list
+           });
+        }
         // GET: api/Category
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Category>>> GetCategories()

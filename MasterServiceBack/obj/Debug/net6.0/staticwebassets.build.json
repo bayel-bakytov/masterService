@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "5h96/lC4BJovpfVndhnjVYrTi9A0gUSrk5CJDHHEPZA=",
+  "Hash": "3Q2BkkE/GgvlWoHwJZMJTYun15W7cL2TpJ0cdOOswu4=",
   "Source": "MasterServiceBack",
   "BasePath": "_content/MasterServiceBack",
   "Mode": "Default",
@@ -32,6 +32,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\78ad2e71-c864-4bd6-91da-2cb4de50fa47.png"
+    },
+    {
+      "Identity": "C:\\Users\\User\\Desktop\\Новая папка (2)\\MasterServiceBack\\MasterServiceBack\\wwwroot\\img\\9624ca47-9055-4699-846c-47997412129f.png",
+      "SourceId": "MasterServiceBack",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Новая папка (2)\\MasterServiceBack\\MasterServiceBack\\wwwroot\\",
+      "BasePath": "_content/MasterServiceBack",
+      "RelativePath": "img/9624ca47-9055-4699-846c-47997412129f.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\9624ca47-9055-4699-846c-47997412129f.png"
     }
   ]
 }

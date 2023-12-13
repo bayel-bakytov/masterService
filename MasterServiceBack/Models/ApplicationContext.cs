@@ -12,4 +12,5 @@ public class ApplicationContext : DbContext
     public DbSet<Application> Applications { get; set; }
     public DbSet<Category> Categories { get; set; }
     public DbSet<Client> Clients { get; set; }
+    public DbSet<MasterSpec> MasterSpecs { get; set; }
 }

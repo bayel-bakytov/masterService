@@ -101,7 +101,17 @@ namespace MasterServiceBack.Controllers
 
             return CreatedAtAction("GetApplication", new { id = application.Id }, application);
         }*/
-        
+        [HttpPost("getAppClient/{id}")]
+        public IActionResult GetAppClient(int id)
+        {
+            var clientApp = _context.Applications.Where(x => x.ClientId == id);
+            return new JsonResult(new
+            {
+                code = 0,
+                message = "Успех",
+                data = clientApp
+            });
+        }
         [HttpPost]
         public async Task<IActionResult> CreateApplication([FromBody] Application applicationDto)
         {

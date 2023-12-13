@@ -111,7 +111,7 @@ namespace MasterServiceBack.Controllers
                 return Problem("Entity set 'ApplicationContext.Clients'  is null.");
             }
 
-            var client = _context.Clients.FirstOrDefault(x => x.Password == StringToBase64(auth.Password) && x.Name == auth.Name);
+            var client = _context.Clients.FirstOrDefault(x => x.Password == StringToBase64(auth.Password) && x.Login == auth.Login);
             if (client == null)
             {
                 return new JsonResult(new

@@ -34,7 +34,7 @@ namespace MasterServiceBack.Controllers
           {
               code = 0,
               message = "success",
-              data = await _context.Applications.ToListAsync()
+              data = await _context.Applications.Where(x => x.Executor == null).ToListAsync()
           });
         }
 

@@ -52,33 +52,18 @@ namespace MasterServiceBack.Controllers
 
         // PUT: api/MasterSpec/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutMasterSpec(int id, MasterSpec masterSpec)
+        [HttpPost("selectMaster")]
+        public async Task<IActionResult> PutMasterSpec([FromForm]int idMaster,[FromForm]int idApp)
         {
-            if (id != masterSpec.Id)
+            var client = _context.Clients.FirstOrDefault(x => x.Id == idMaster);
+            var app = _context.Applications.FirstOrDefault(x => x.Id == idApp);
+            app.Executor = client.Id;
+            _context.SaveChangesAsync();
+            return new JsonResult(new
             {
-                return BadRequest();
-            }
-
-            _context.Entry(masterSpec).State = EntityState.Modified;
-
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!MasterSpecExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-
-            return NoContent();
+                code = 0,
+                message = "Успех"
+            });
         }
 
         // POST: api/MasterSpec

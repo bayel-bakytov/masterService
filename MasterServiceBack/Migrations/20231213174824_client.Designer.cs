@@ -3,6 +3,7 @@ using System;
 using MasterServiceBack.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,10 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace MasterServiceBack.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    partial class ApplicationContextModelSnapshot : ModelSnapshot
+    [Migration("20231213174824_client")]
+    partial class client
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -29,9 +31,6 @@ namespace MasterServiceBack.Migrations
                         .HasColumnType("integer");
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Address")
-                        .HasColumnType("text");
 
                     b.Property<int?>("CategoryId")
                         .HasColumnType("integer");
@@ -49,9 +48,6 @@ namespace MasterServiceBack.Migrations
                         .HasColumnType("text");
 
                     b.Property<string>("LinkImg")
-                        .HasColumnType("text");
-
-                    b.Property<string>("Status")
                         .HasColumnType("text");
 
                     b.Property<string>("Title")

@@ -14,4 +14,6 @@ public class Application
     public int? CategoryId { get; set; }      // Используем int?
     public int? ClientId { get; set; }        // Используем int?
     public Category? Category { get; set; }
+    public string? Address { get; set; }
+    public string? Status { get; set; } 
 }

@@ -1,20 +1,8 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\User\\Desktop\\Новая папка (2)\\MasterServiceBack\\MasterServiceBack\\wwwroot\\img\\20ed64f2-2658-43ff-8d76-3916ecb8d6bf.png",
-      "PackagePath": "staticwebassets\\img\\20ed64f2-2658-43ff-8d76-3916ecb8d6bf.png"
-    },
-    {
-      "Id": "C:\\Users\\User\\Desktop\\Новая папка (2)\\MasterServiceBack\\MasterServiceBack\\wwwroot\\img\\36cd789a-fefe-4fd9-bfd2-4d9339895402.png",
-      "PackagePath": "staticwebassets\\img\\36cd789a-fefe-4fd9-bfd2-4d9339895402.png"
-    },
-    {
-      "Id": "C:\\Users\\User\\Desktop\\Новая папка (2)\\MasterServiceBack\\MasterServiceBack\\wwwroot\\img\\51bb1dfd-c830-4ab6-95c0-968907029d8f.png",
-      "PackagePath": "staticwebassets\\img\\51bb1dfd-c830-4ab6-95c0-968907029d8f.png"
-    },
-    {
-      "Id": "C:\\Users\\User\\Desktop\\Новая папка (2)\\MasterServiceBack\\MasterServiceBack\\wwwroot\\img\\c9290e01-353f-49d9-b39e-555e1c955dd9.png",
-      "PackagePath": "staticwebassets\\img\\c9290e01-353f-49d9-b39e-555e1c955dd9.png"
+      "Id": "C:\\Users\\User\\Desktop\\Новая папка (2)\\MasterServiceBack\\MasterServiceBack\\wwwroot\\img\\78ad2e71-c864-4bd6-91da-2cb4de50fa47.png",
+      "PackagePath": "staticwebassets\\img\\78ad2e71-c864-4bd6-91da-2cb4de50fa47.png"
     },
     {
       "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.MasterServiceBack.Microsoft.AspNetCore.StaticWebAssets.props",

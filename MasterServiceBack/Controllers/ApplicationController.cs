@@ -112,7 +112,6 @@ namespace MasterServiceBack.Controllers
 
             try
             {
-                // Обработка фото
                 string uniqueFileName = $"{Guid.NewGuid().ToString()}.png"; // или другое расширение в зависимости от формата фото
                 string uploadsFolder = Path.Combine(_environment.WebRootPath, "img");
                 string filePath = Path.Combine(uploadsFolder, uniqueFileName);
@@ -123,7 +122,6 @@ namespace MasterServiceBack.Controllers
                     await stream.WriteAsync(imageBytes, 0, imageBytes.Length);
                 }
 
-                // Создание записи в БД
                 var application = new Application
                 {
                     Title = applicationDto.Title,

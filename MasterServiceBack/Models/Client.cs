@@ -12,4 +12,6 @@ public class Client
     public string? Login { get; set; }
     public string? Password { get; set; }
     public string? Role { get; set; }
+    public string? Spec { get; set; }
+    public string? Address { get; set; }
 }

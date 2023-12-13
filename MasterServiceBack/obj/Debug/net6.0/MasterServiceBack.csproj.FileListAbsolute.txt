@@ -276,3 +276,5 @@ C:\Users\User\Desktop\Новая папка (2)\MasterServiceBack\MasterServiceB
 C:\Users\User\Desktop\Новая папка (2)\MasterServiceBack\MasterServiceBack\bin\Debug\net6.0\runtimes\win-x64\native\e_sqlite3.dll
 C:\Users\User\Desktop\Новая папка (2)\MasterServiceBack\MasterServiceBack\bin\Debug\net6.0\runtimes\win-x86\native\e_sqlite3.dll
 C:\Users\User\Desktop\Новая папка (2)\MasterServiceBack\MasterServiceBack\bin\Debug\net6.0\MasterServiceBack.staticwebassets.runtime.json
+C:\Users\User\Desktop\Новая папка (2)\MasterServiceBack\MasterServiceBack\bin\Debug\net6.0\Npgsql.dll
+C:\Users\User\Desktop\Новая папка (2)\MasterServiceBack\MasterServiceBack\bin\Debug\net6.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll

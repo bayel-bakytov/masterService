@@ -66,6 +66,19 @@ namespace MasterServiceBack.Controllers
             });
         }
 
+        [HttpPost("selectMasterApp/{id}")]
+        public async Task<IActionResult> SelMasterSpec(int id)
+        {
+            var client = _context.Applications.Where(x => x.Executor == id);
+            _context.SaveChangesAsync();
+            return new JsonResult(new
+            {
+                code = 0,
+                message = "Успех",
+                data = client
+            });
+        }
+        
         // POST: api/MasterSpec
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]

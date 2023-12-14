@@ -112,6 +112,20 @@ namespace MasterServiceBack.Controllers
                 data = clientApp
             });
         }
+        
+        [HttpPost("FinishApp/{idApp}")]
+        public IActionResult FinishApp(int idApp)
+        {
+            var clientApp = _context.Applications.FirstOrDefault(x => x.Id == idApp);
+            clientApp.Status = "Finish";
+            _context.SaveChangesAsync();
+            return new JsonResult(new
+            {
+                code = 0,
+                message = "Успех",
+                data = clientApp
+            });
+        }
         [HttpPost]
         public async Task<IActionResult> CreateApplication([FromBody] Application applicationDto)
         {

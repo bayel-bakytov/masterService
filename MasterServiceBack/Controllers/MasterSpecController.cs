@@ -58,6 +58,8 @@ namespace MasterServiceBack.Controllers
             var client = _context.Clients.FirstOrDefault(x => x.Id == idMaster);
             var app = _context.Applications.FirstOrDefault(x => x.Id == idApp);
             app.Executor = client.Id;
+            app.Status = "В работе";
+            _context.Applications.Update(app);
             _context.SaveChangesAsync();
             return new JsonResult(new
             {
@@ -70,7 +72,6 @@ namespace MasterServiceBack.Controllers
         public async Task<IActionResult> SelMasterSpec(int id)
         {
             var client = _context.Applications.Where(x => x.Executor == id);
-            _context.SaveChangesAsync();
             return new JsonResult(new
             {
                 code = 0,

@@ -1,6 +1,9 @@
+using MasterServiceBack.Dto;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using MasterServiceBack.Models;
+using MasterServiceBack.Notify;
+using Microsoft.AspNetCore.SignalR;
 
 namespace MasterServiceBack.Controllers
 {
@@ -9,12 +12,26 @@ namespace MasterServiceBack.Controllers
     public class MasterSpecController : ControllerBase
     {
         private readonly ApplicationContext _context;
-
-        public MasterSpecController(ApplicationContext context)
+        private readonly IHubContext<NotificationHub> _hubContext;
+        private static List<SendData> msg = new List<SendData>();
+        public MasterSpecController(ApplicationContext context, IHubContext<NotificationHub> hubContext)
         {
             _context = context;
+            _hubContext = hubContext;
         }
 
+        [HttpPost("getNotify")]
+        public async Task<IActionResult> getNotify([FromForm] int idCli)
+        {
+            
+            return new JsonResult(new
+            {
+                code = 0,
+                message = "Успех",
+                data = msg.Where(x => x.User == idCli.ToString()).ToList()
+            });
+        }
+        
         // GET: api/MasterSpec
         [HttpGet]
         public async Task<ActionResult<IEnumerable<MasterSpec>>> GetMasterSpecs()
@@ -61,6 +78,14 @@ namespace MasterServiceBack.Controllers
             app.Status = "В работе";
             _context.Applications.Update(app);
             _context.SaveChangesAsync();
+            
+            await _hubContext.Clients.User(idMaster.ToString()).SendAsync("ReceiveNotification", "Вас выбрали в качестве исполнителя!");
+            msg.Add(new SendData()
+            {
+                App = idApp.ToString(),
+                Message = "Вас выбрали в качестве исполнителя!",
+                User = idMaster.ToString()
+            });
             return new JsonResult(new
             {
                 code = 0,

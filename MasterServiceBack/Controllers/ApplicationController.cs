@@ -34,7 +34,7 @@ namespace MasterServiceBack.Controllers
           {
               code = 0,
               message = "success",
-              data = await _context.Applications.Where(x => x.Executor == null && x.Status != "Finish").ToListAsync()
+              data = await _context.Applications.Where(x => x.Executor == null && x.Status != "Завершено").ToListAsync()
           });
         }
 
@@ -117,7 +117,7 @@ namespace MasterServiceBack.Controllers
         public IActionResult FinishApp(int idApp)
         {
             var clientApp = _context.Applications.FirstOrDefault(x => x.Id == idApp);
-            clientApp.Status = "Finish";
+            clientApp.Status = "Завершено";
             _context.SaveChangesAsync();
             return new JsonResult(new
             {

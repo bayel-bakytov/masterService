@@ -1,4 +1,5 @@
 ﻿using MasterServiceBack.Models;
+using MasterServiceBack.Notify;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,6 +11,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddHttpContextAccessor();
+builder.Services.AddSignalR();
 
 builder.Services.AddCors(p => p.AddPolicy("corsapp", builder =>
 {
@@ -34,7 +36,11 @@ app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
-app.MapControllers();
-
+app.UseRouting();
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapHub<NotificationHub>("/notificationHub");
+    endpoints.MapControllers();
+});
 
 app.Run();

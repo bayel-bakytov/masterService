@@ -14,10 +14,12 @@ namespace MasterServiceBack.Controllers
         private readonly ApplicationContext _context;
         private readonly IHubContext<NotificationHub> _hubContext;
         private static List<SendData> msg = new List<SendData>();
-        public MasterSpecController(ApplicationContext context, IHubContext<NotificationHub> hubContext)
+        private readonly NotificationHub _notificationHub;
+        public MasterSpecController(ApplicationContext context, IHubContext<NotificationHub> hubContext, NotificationHub notificationHub)
         {
             _context = context;
             _hubContext = hubContext;
+            _notificationHub = notificationHub;
         }
 
         [HttpPost("getNotify")]
@@ -79,7 +81,8 @@ namespace MasterServiceBack.Controllers
             _context.Applications.Update(app);
             _context.SaveChangesAsync();
             
-            await _hubContext.Clients.User(idMaster.ToString()).SendAsync("ReceiveNotification", "Вас выбрали в качестве исполнителя!");
+           // await _hubContext.Clients.User(.ToString()).SendAsync("ReceiveNotification", "Вас выбрали в качестве исполнителя!");
+            _notificationHub.SendNotificationToUser(idMaster.ToString(), "Вас выбрали в качестве исполнителя!");
             msg.Add(new SendData()
             {
                 App = idApp.ToString(),
